@@ -5,7 +5,23 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('RE Database'),
+      ),
+      body: Stack(
+        children: [
+          Expanded(child: Container(color: Colors.white,)),
+          Positioned(
+            child: 
+            CircleAvatar(
+              radius:100,
+              backgroundColor: Colors.transparent,
+              child: Image.asset("assets/images/leon-avatar.png")
+            )
+          )
+        ],
+      )
       
     );
   }
