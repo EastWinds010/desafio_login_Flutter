@@ -1,4 +1,5 @@
 import 'package:desafio_login/forgot_password.dart';
+import 'package:desafio_login/login.dart';
 import 'package:desafio_login/register.dart';
 import 'package:flutter/material.dart';
 
@@ -17,13 +18,10 @@ class First extends StatelessWidget {
             top: 200,
             right: 80,
             child:
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-                child: CircleAvatar(
-                  radius: 100,
-                  backgroundColor: Colors.transparent,
-                  child: Image.asset("assets/images/umbrella-logo.jpg")
-                ),
+            CircleAvatar(
+              radius:100,
+              backgroundColor: Colors.transparent,
+              child: Image.asset("assets/images/umbrella-logo.jpg")
             )
           ),
           Positioned(
@@ -78,7 +76,11 @@ class First extends StatelessWidget {
                         width: 112.5,
                         child: Padding(
                           padding: const EdgeInsets.all(4.0),
-                            child: ElevatedButton(onPressed: () {},
+                            child: ElevatedButton(onPressed: () {
+                              Navigator.push(context,
+                              MaterialPageRoute(builder: (BuildContext context) => const Login())
+                              );
+                            },
                               child: const Text('Login')
                             ),
                         ),
